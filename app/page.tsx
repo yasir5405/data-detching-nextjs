@@ -11,9 +11,7 @@ interface IApi {
 }
 
 export default async function Home() {
-  const res = await axios.get(
-    "https://week-13-offline.kirattechnologies.workers.dev/api/v1/user/details"
-  );
+  const res = await axios.get("http://localhost:3000/api/v1/user/details");
   const data: IApi = res.data;
   return (
     <div className="flex flex-col h-screen w-full items-center justify-center">
